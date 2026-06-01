@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Trimmer Hair Salon & Beautician Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #d4af37;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(45, 45, 45, 0.85) 100%), url('ChatGPT Image May 17, 2026, 05_09_22 AM.png') center/cover;
+            color: #d4af37;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #d4af37;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #d4af37;
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #d4af37;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Team Section */
+        .team {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .team h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #d4af37;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .team-member .title {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .team-member .expertise {
+            color: #fff;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #d4af37;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: #d4af37;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 2px solid #d4af37;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .services h2,
+            .team h2,
+            .contact h2,
+            .gallery-container h2,
+            .testimonials-container h2,
+            .why-container h2,
+            .booking-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .services-grid,
+            .team-grid,
+            .contact-grid,
+            .gallery-grid,
+            .testimonials-grid,
+            .features-grid,
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form {
+                padding: 20px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-buttons .cta-button {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            nav ul {
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.95rem;
+            }
+
+            .services h2,
+            .team h2,
+            .contact h2,
+            .gallery-container h2,
+            .testimonials-container h2,
+            .why-container h2,
+            .booking-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-item {
+                height: 250px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-buttons .cta-button {
+                width: 100%;
+            }
+
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+                font-size: 20px;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .stat-item {
+                padding: 20px;
+            }
+
+            .booking-form {
+                padding: 15px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-item {
+                padding: 20px;
+            }
+        }
+
+        /* Gallery Section */
+        .gallery {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: #d4af37;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(212, 175, 55, 0.9));
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .stars {
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+
+        .why-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .feature p {
+            color: #fff;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Booking Section */
+        .booking {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .booking-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .booking-subtitle {
+            text-align: center;
+            color: #d4af37;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .booking-form {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4af37;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+            background-color: #fff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a227 100%);
+            color: #1a1a1a;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-note {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .form-note strong {
+            color: #d4af37;
+        }
+
+        /* Contact Buttons */
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-buttons .cta-button {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366 !important;
+            border-color: #25D366 !important;
+        }
+
+        .whatsapp-btn:hover {
+            background: transparent !important;
+            color: #25D366 !important;
+        }
+
+        .call-btn {
+            background: #4CAF50 !important;
+            border-color: #4CAF50 !important;
+        }
+
+        .call-btn:hover {
+            background: transparent !important;
+            color: #4CAF50 !important;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Statistics Section */
+        .stats {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 60px 20px;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            background: rgba(212, 175, 55, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* Business Hours Section */
+        .hours {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .hours-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hours-item {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #d4af37;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #d4af37;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hours-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .hours-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .hours-item p {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .hours-note {
+            text-align: center;
+            color: #d4af37;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        /* Utility Classes */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">✂️ New Trimmer</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>New Trimmer Hair Salon</h1>
+            <p>& Beautician Center</p>
+            <p style="font-size: 1rem; margin-top: 1.5rem;">Professional Hair & Beauty Services Since 1998</p>
+            <a href="#contact" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <video width="500" height="400" controls style="border-radius: 10px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);">
+                <source src="WhatsApp Video 2026-05-23 at 2.23.09 AM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to <span class="highlight">New Trimmer Hair Salon & Beautician Center</span>, your premier destination for professional hair and beauty services.</p>
+
+            <p><span class="highlight">Established in 1998</span>, we have been serving our community with excellence and dedication for over two decades. Our salon is staffed with highly trained professionals who are passionate about delivering exceptional results.</p>
+
+            <p>Located in <span class="highlight">Din Bahar, near Haji Abad, Charsadda Road</span>, we pride ourselves on maintaining the highest standards of hygiene, professionalism, and customer satisfaction.</p>
+
+            <p>Whether you're looking for a simple haircut or a complete beauty transformation, our expert team is ready to make you look and feel your best.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Hair Cutting</h3>
+                    <p>Professional haircuts tailored to your style and preferences by our expert stylists.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Beard Cutting</h3>
+                    <p>Precision beard trimming and styling for a sharp, well-groomed appearance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Keratin</h3>
+                    <p>Advanced keratin treatment for smooth, shiny, and manageable hair.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Rebonding</h3>
+                    <p>Professional hair rebonding for permanently straight, silky hair.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Color</h3>
+                    <p>Expert hair coloring services with premium quality products.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Xtenso</h3>
+                    <p>Hair straightening treatment for long-lasting smooth results.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hydra Facial</h3>
+                    <p>Advanced hydrating facial treatment for glowing, rejuvenated skin.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Facial Face Wash</h3>
+                    <p>Professional facial cleansing and skincare treatments.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Wax</h3>
+                    <p>Professional hair waxing for smooth, hair-free skin.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Body Massage</h3>
+                    <p>Relaxing therapeutic massage to relieve stress and tension.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Head Wash</h3>
+                    <p>Therapeutic head wash with premium products for scalp health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <h2>Our Expert Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>M Usman</h3>
+                <div class="title">Master Stylist & Owner</div>
+                <div class="expertise">
+                    Expert in Hair Cutting, Hair Keratin, Hair Rebonding, and Hydra Facial treatments. With years of experience, M Usman leads our team with professionalism and excellence.
+                </div>
+            </div>
+            <div class="team-member">
+                <h3>Fazal Subhan</h3>
+                <div class="title">Hair & Beauty Expert</div>
+                <div class="expertise">
+                    Specialist in Hair Keratin, Hair Rebonding, and Hydra Facial. Fazal brings expertise and precision to every service, ensuring outstanding results.
+                </div>
+            </div>
+            <div class="team-member">
+                <h3>Fakhar Sultan</h3>
+                <div class="title">Hair & Beard Stylist</div>
+                <div class="expertise">
+                    Expert in Hair Styling and Beard Styling. Fakhar's creative approach and attention to detail make every client feel confident and stylish.
+                </div>
+            </div>
+            <div class="team-member">
+                <h3>Hamza</h3>
+                <div class="title">Hair Cutting Specialist</div>
+                <div class="expertise">
+                    Specialist in professional hair cutting with precision and expertise. Hamza ensures every cut is perfect and tailored to your preferences.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="booking-container">
+            <h2>Book Your Appointment</h2>
+            <p class="booking-subtitle">Schedule your visit with our expert team</p>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="Hair Cutting">Hair Cutting</option>
+                            <option value="Beard Cutting">Beard Cutting</option>
+                            <option value="Hair Keratin">Hair Keratin</option>
+                            <option value="Hair Rebonding">Hair Rebonding</option>
+                            <option value="Hair Color">Hair Color</option>
+                            <option value="Hair Xtenso">Hair Xtenso</option>
+                            <option value="Hydra Facial">Hydra Facial</option>
+                            <option value="Facial Face Wash">Facial Face Wash</option>
+                            <option value="Hair Wax">Hair Wax</option>
+                            <option value="Body Massage">Body Massage</option>
+                            <option value="Head Wash">Head Wash</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any special requests or notes..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+            <p class="form-note">Or contact us directly at <strong>0311-9088229</strong> or <strong>kmfarhan614@gmail.com</strong></p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">28+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Expert Professionals</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">11</div>
+                <div class="stat-label">Premium Services</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>📍 Location</h3>
+                    <p>Din Bahar, Near Haji Abad</p>
+                    <p>Charsadda Road</p>
+                </div>
+                <div class="contact-info">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:03119088229">0311-9088229</a></p>
+                    <p>Call us for appointments</p>
+                </div>
+                <div class="contact-info">
+                    <h3>✉️ Email</h3>
+                    <p><a href="mailto:kmfarhan614@gmail.com">kmfarhan614@gmail.com</a></p>
+                    <p>For bookings and inquiries</p>
+                </div>
+            </div>
+            <div style="margin-top: 40px; text-align: center; border-top: 1px solid #d4af37; padding-top: 30px;">
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">📅 Ready to Book Your Appointment?</p>
+                <p style="color: #fff; margin-bottom: 1.5rem;">Contact us via email, phone, or WhatsApp to schedule your visit</p>
+                <div class="contact-buttons">
+                    <a href="mailto:kmfarhan614@gmail.com" class="cta-button">Email Us</a>
+                    <a href="https://wa.me/923119088229?text=Hello%20New%20Trimmer%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="cta-button whatsapp-btn">WhatsApp</a>
+                    <a href="tel:03119088229" class="cta-button call-btn">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
+            <h2>Gallery</h2>
+            <p class="gallery-subtitle">See Our Professional Work</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Professional+Hair+Cut" alt="Professional Hair Cut">
+                    <div class="gallery-overlay">Hair Cutting</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Expert+Beard+Styling" alt="Beard Styling">
+                    <div class="gallery-overlay">Beard Styling</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Beautiful+Hair+Coloring" alt="Hair Coloring">
+                    <div class="gallery-overlay">Hair Coloring</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Keratin+Treatment" alt="Keratin Treatment">
+                    <div class="gallery-overlay">Keratin Treatment</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Hydra+Facial+Treatment" alt="Hydra Facial">
+                    <div class="gallery-overlay">Hydra Facial</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x300/1a1a1a/d4af37?text=Professional+Hair+Styling" alt="Hair Styling">
+                    <div class="gallery-overlay">Hair Styling</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excellent service! The team at New Trimmer is highly professional and skilled. I always get the best haircut here."</p>
+                    <p class="testimonial-author">- Ahmed Khan</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Amazing hydra facial treatment! My skin has never looked better. Highly recommended for everyone."</p>
+                    <p class="testimonial-author">- Fatima Ali</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The keratin treatment was fantastic! My hair is now smooth and shiny. Great work by the team!"</p>
+                    <p class="testimonial-author">- Sara Hassan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="why-container">
+            <h2>Why Choose New Trimmer?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>28+ Years Experience</h3>
+                    <p>Serving the community since 1998 with excellence and dedication.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👨‍💼</div>
+                    <h3>Expert Team</h3>
+                    <p>Highly trained professionals with specialized expertise in all services.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Using only high-quality products and latest techniques for best results.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧼</div>
+                    <h3>Hygiene & Safety</h3>
+                    <p>Maintaining highest standards of cleanliness and sanitation.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable Prices</h3>
+                    <p>Professional services at competitive and reasonable rates.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">😊</div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your satisfaction is our priority. We ensure every client leaves happy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Business Hours Section -->
+    <section class="hours">
+        <div class="hours-container">
+            <h2>Business Hours</h2>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <h3>Every Day</h3>
+                    <p>8:00 AM - 11:00 PM</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Open Daily</h3>
+                    <p>No Holidays</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Always Available</h3>
+                    <p>7 Days a Week</p>
+                </div>
+                <div class="hours-item">
+                    <h3>Extended Hours</h3>
+                    <p>15 Hours Daily</p>
+                </div>
+            </div>
+            <p class="hours-note">We're open every day from 8:00 AM to 11:00 PM with no holidays! Always ready to serve you with our professional team!</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <a href="https://wa.me/923119088229?text=Hello%20New%20Trimmer%20Hair%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+        💬
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 New Trimmer Hair Salon & Beautician Center. All rights reserved.</p>
+        <p>Professional Hair & Beauty Services Since 1998</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Din Bahar, Charsadda Road | Phone: 0311-9088229</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .team-member, .testimonial-card, .feature').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Booking Form Handler
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const service = document.getElementById('service').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const message = document.getElementById('message').value;
+
+                // Validate form
+                if (!name || !phone || !service || !date || !time) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+
+                // Create booking message
+                const bookingMessage = `
+New Booking Request:
+Name: ${name}
+Phone: ${phone}
+Email: ${email || 'Not provided'}
+Service: ${service}
+Date: ${date}
+Time: ${time}
+Notes: ${message || 'None'}
+                `.trim();
+
+                // Send via email (using mailto)
+                const mailtoLink = `mailto:kmfarhan614@gmail.com?subject=New Booking Request from ${name}&body=${encodeURIComponent(bookingMessage)}`;
+                window.location.href = mailtoLink;
+
+                // Show success message
+                alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+                bookingForm.reset();
+            });
+        }
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        // Active navigation link highlight
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.color = '#d4af37';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.borderBottom = '2px solid #d4af37';
+                    link.style.paddingBottom = '5px';
+                } else {
+                    link.style.borderBottom = 'none';
+                    link.style.paddingBottom = '0';
+                }
+            });
+        });
+
+        // Mobile menu toggle (optional enhancement)
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+            } else {
+                // Scrolling up
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let current = 0;
+            const increment = target / (duration / 16);
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Trigger animations on page load
+        window.addEventListener('load', function() {
+            console.log('New Trimmer Hair Salon website loaded successfully!');
+        });
+    </script>
+</body>
+</html>
