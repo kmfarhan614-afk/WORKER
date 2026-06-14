@@ -361,7 +361,8 @@
             .gallery-container h2,
             .testimonials-container h2,
             .why-container h2,
-            .booking-container h2 {
+            .booking-container h2,
+            .map-container h2 {
                 font-size: 1.8rem;
             }
 
@@ -371,7 +372,8 @@
             .gallery-grid,
             .testimonials-grid,
             .features-grid,
-            .stats-container {
+            .stats-container,
+            .map-info {
                 grid-template-columns: 1fr;
             }
 
@@ -418,6 +420,10 @@
             .stat-label {
                 font-size: 0.95rem;
             }
+
+            .map-wrapper {
+                height: 400px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -445,7 +451,8 @@
             .gallery-container h2,
             .testimonials-container h2,
             .why-container h2,
-            .booking-container h2 {
+            .booking-container h2,
+            .map-container h2 {
                 font-size: 1.5rem;
             }
 
@@ -497,6 +504,27 @@
 
             .hours-item {
                 padding: 20px;
+            }
+
+            .map-wrapper {
+                height: 300px;
+            }
+
+            .map-info-card {
+                padding: 20px;
+            }
+
+            .map-info-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .map-info-card p {
+                font-size: 0.9rem;
+            }
+
+            .map-link {
+                padding: 8px 15px;
+                font-size: 0.9rem;
             }
         }
 
@@ -984,6 +1012,128 @@
             margin-top: 20px;
         }
 
+        /* Map Section */
+        .map-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .map-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .map-subtitle {
+            text-align: center;
+            color: #d4af37;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .map-wrapper {
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .map-wrapper:hover {
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.35);
+            transform: translateY(-5px);
+        }
+
+        .map-wrapper::after {
+            content: 'Click to open in Google Maps';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(212, 175, 55, 0.9);
+            color: #1a1a1a;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .map-wrapper:hover::after {
+            opacity: 1;
+        }
+
+        .map-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .map-info-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #d4af37;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .map-info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .map-info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .map-info-card p {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .map-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 12px 25px;
+            border: 2px solid #d4af37;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .map-link:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .map-link::before {
+            content: '📍 ';
+            margin-right: 5px;
+        }
+
         /* Utility Classes */
         .section-divider {
             height: 2px;
@@ -1004,6 +1154,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#team">Team</a></li>
+                    <li><a href="#map">Map</a></li>
                     <li><a href="#booking">Booking</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1377,6 +1528,40 @@
                 </div>
             </div>
             <p class="hours-note">We're open every day from 8:00 AM to 11:00 PM with no holidays! Always ready to serve you with our professional team!</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Location Map Section -->
+    <section class="map-section" id="map">
+        <div class="map-container">
+            <h2>Visit Our Salon</h2>
+            <p class="map-subtitle">Find us on the map and visit our professional facility</p>
+            <div class="map-wrapper">
+                <a href="https://maps.app.goo.gl/pJaup28Eri26JvdU9" target="_blank" style="display:block; cursor:pointer; text-decoration:none;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.8945516484546!2d71.45456!3d34.31667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df60c8d4d4d4d5%3A0x5d5d5d5d5d5d5d5d!2sDin%20Bahar%2C%20Charsadda!5e0!3m2!1sen!2spk!4v1625000000000" width="100%" height="500" style="border:none;border-radius:10px; pointer-events:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
+            </div>
+            <div class="map-info">
+                <div class="map-info-card">
+                    <h3>📍 Our Location</h3>
+                    <p>Din Bahar, Near Haji Abad</p>
+                    <p>Charsadda Road</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #999;">Charsadda, Khyber Pakhtunkhwa, Pakistan</p>
+                </div>
+                <div class="map-info-card">
+                    <h3>🕐 Business Hours</h3>
+                    <p>Monday - Sunday</p>
+                    <p>8:00 AM - 11:00 PM</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #999;">Open Every Day, No Holidays</p>
+                </div>
+                <div class="map-info-card">
+                    <h3>📞 Get Directions</h3>
+                    <p><a href="https://maps.app.goo.gl/pJaup28Eri26JvdU9" target="_blank" class="map-link">Open in Google Maps</a></p>
+                    <p style="margin-top: 15px; font-size: 0.9rem;">Click to get turn-by-turn directions</p>
+                </div>
+            </div>
         </div>
     </section>
 
